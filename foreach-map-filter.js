@@ -169,8 +169,10 @@ Examples:
 */
 
 function removeVowels(str) {
-    str = str.replace(/[aeiou]/ig, '').toLowerCase()
-    return str
+    let regex = /[aeiou]/i
+   arr = str.split('').filter(letter => !regex.test(letter))
+   arr = arr.join('').toLowerCase()
+   return arr
 }
 
 /*
